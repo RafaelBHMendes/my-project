@@ -4,27 +4,34 @@ const NucleosAtuacao = () => {
   const nucleos = [
     {
       id: 1,
-      title: 'Auto Capitalização',
-      description: [
-        'Transformar patrimônio em capital de trabalho.',
-        'Utilizar bens como garantia para obter crédito com taxas de 0,5% a 0,7% ao mês.'
+      title: 'AUTO CAPITALIZAÇÃO',
+      shortDescription: 'Transforme seu patrimônio em capital com taxas de 0,5% a 0,7% ao mês.',
+      bulletPoints: [
+        'Menos juros, mais controle',
+        'Dinheiro direto na conta',
+        'Assessoria especializada'
       ],
       icon: '💰'
     },
     {
       id: 2,
-      title: 'Substituir Financiamento',
-      description: [
-        'Reduzir os juros do financiamento atual.',
-        'Exemplo: Parcela de R$20.000 reduzida para R$8.000 a R$9.000.'
+      title: 'SUBSTITUIÇÃO DE FINANCIAMENTO',
+      shortDescription: 'Troque financiamentos com juros altos por taxas mais baixas (0,5% a 0,7% ao mês).',
+      bulletPoints: [
+        'Parcelas reduzidas',
+        'Taxa mais previsível',
+        'Melhor gestão financeira'
       ],
       icon: '📉'
     },
     {
       id: 3,
-      title: 'Venda do Crédito',
-      description: [
-        'Comercializar crédito para liquidez imediata.'
+      title: 'VENDA DE ATIVOS FINANCEIROS',
+      shortDescription: 'Negocie seus ativos para obter lucro imediato e liquidez.',
+      bulletPoints: [
+        'Liquidez imediata',
+        'Valorização do ativo',
+        'Transação sem burocracia'
       ],
       icon: '💳'
     }
@@ -33,7 +40,7 @@ const NucleosAtuacao = () => {
   return (
     <section id="nucleos-atuacao" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="section-title text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Nossos Núcleos de Atuação
         </h2>
         
@@ -41,15 +48,20 @@ const NucleosAtuacao = () => {
           {nucleos.map((nucleo) => (
             <div 
               key={nucleo.id} 
-              className="bg-light rounded-lg shadow-lg p-8 transition-transform duration-300 hover:transform hover:scale-105"
+              className="bg-light rounded-lg shadow-lg p-8 transition-transform duration-300 hover:scale-105"
             >
               <div className="text-5xl mb-4 text-center">{nucleo.icon}</div>
-              <h3 className="text-xl font-bold mb-4 text-center text-primary">{nucleo.title}</h3>
-              <ul className="space-y-2">
-                {nucleo.description.map((item, index) => (
+              <h3 className="text-xl font-bold mb-2 text-center text-primary">
+                {nucleo.title}
+              </h3>
+              <p className="text-center mb-4">
+                {nucleo.shortDescription}
+              </p>
+              <ul className="mt-4 space-y-2">
+                {nucleo.bulletPoints.map((point, index) => (
                   <li key={index} className="flex items-start">
                     <span className="text-secondary mr-2">•</span>
-                    <span>{item}</span>
+                    <span>{point}</span>
                   </li>
                 ))}
               </ul>
@@ -61,4 +73,4 @@ const NucleosAtuacao = () => {
   );
 };
 
-export default NucleosAtuacao; 
+export default NucleosAtuacao;

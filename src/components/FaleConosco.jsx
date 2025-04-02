@@ -17,7 +17,7 @@ const FaleConosco = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Telefone</h3>
-              <p className="text-primary font-medium">88 9921-7313</p>
+              <p className="text-primary font-medium">88 99239-1516</p>
             </div>
             
             {/* E-mail */}

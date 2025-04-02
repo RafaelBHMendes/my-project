@@ -19,12 +19,12 @@ const Hero = () => {
           <p className="text-xl md:text-2xl mb-8">
             Soluções estratégicas para maximizar seu capital
           </p>
-          <button
+          {/*<button
             onClick={() => scrollToSection('quem-somos')}
             className="btn bg-secondary hover:bg-yellow-600 text-primary font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
           >
             Saiba Mais
-          </button>
+          </button>*/}
         </div>
       </div>
     </section>

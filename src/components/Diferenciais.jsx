@@ -26,6 +26,11 @@ const Diferenciais = () => {
       id: 5,
       title: 'Atuação nacional',
       icon: '🌎'
+    },
+    {
+      id: 6,
+      title: 'Recursos de bancos públicos',
+      icon: '🏦'
     }
   ];
 
@@ -41,7 +46,7 @@ const Diferenciais = () => {
               <div key={diferencial.id} className="flex items-start p-4 bg-dark-bg bg-opacity-30 rounded-lg">
                 <div className="text-3xl mr-4 text-secondary">{diferencial.icon}</div>
                 <div>
-                  <h3 className="text-xl font-semibold">{diferencial.title}</h3>
+                  <h3 className="text-xl font-semibold mt-1">{diferencial.title}</h3>
                 </div>
               </div>
             ))}

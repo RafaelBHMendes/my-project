@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../assets/logo.png';
-import logoScrolled from '../assets/logoScrolled.png';
+import logo from '../assets/logoTest2.png';
+import logoScrolled from '../assets/logoScrolledTest2.png';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -24,25 +24,33 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed w-full z-10 transition-all duration-300 ${
+      // Alterado z-10 para z-50
+      className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
       }`}
     >
       <div className="max-w-screen-xl mx-auto px-4 flex justify-between items-center relative">
-        <div className="logo flex items-center">
+        <a 
+          href="/"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection('hero');
+          }}
+          className="flex items-center"
+        >
           <img
             src={scrolled ? logoScrolled : logo}
             alt="DOMINUS Logo"
-            className="h-10 mr-3 transition-all duration-300"
+            className="h-16 mr-3 transition-all duration-300"
           />
           <h1
-            className={`text-xl md:text-2xl font-bold mt-4 ${
+            className={`text-xl md:text-2xl font-bold mt-4 ml-4 ${
               scrolled ? 'text-primary' : 'text-white'
             }`}
           >
             DOMINUS
           </h1>
-        </div>
+        </a>
         {/* Menu Desktop */}
         <nav className="hidden md:block">
           <ul className="flex space-x-6">
@@ -95,12 +103,10 @@ const Header = () => {
             className={`focus:outline-none ${scrolled ? 'text-black' : 'text-white'}`}
           >
             {menuOpen ? (
-              // Ícone "X" para fechar o menu
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             ) : (
-              // Ícone de hambúrguer
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>

@@ -1,4 +1,5 @@
 import React from 'react';
+import building from '../assets/building.jpg';
 
 const Diferenciais = () => {
   const diferenciais = [
@@ -35,18 +36,43 @@ const Diferenciais = () => {
   ];
 
   return (
-    <section id="diferenciais" className="py-20 bg-primary text-white">
-      <div className="container mx-auto px-4">
-        <h2 className="section-title text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+    <section
+      id="diferenciais"
+      className="relative py-20 text-white"
+      style={{
+        backgroundImage: `url(${building})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      {/* Overlay para suavizar o background */}
+      <div className="absolute inset-0 bg-black opacity-40"></div>
+
+      <div className="relative container mx-auto px-4">
+        <h2 className="section-title text-3xl md:text-4xl font-bold text-center mb-12">
           Nossos Diferenciais
         </h2>
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {diferenciais.map((diferencial) => (
-              <div key={diferencial.id} className="flex items-start p-4 bg-dark-bg bg-opacity-30 rounded-lg">
-                <div className="text-3xl mr-4 text-secondary">{diferencial.icon}</div>
+              <div
+                key={diferencial.id}
+                className="
+                  flex items-start p-4 
+                  bg-dark-bg bg-opacity-30 
+                  rounded-lg 
+                  transition-all duration-300 
+                  hover:bg-opacity-50 hover:shadow-xl 
+                  hover:-translate-y-1
+                "
+              >
+                <div className="text-3xl mr-4 text-secondary">
+                  {diferencial.icon}
+                </div>
                 <div>
-                  <h3 className="text-xl font-semibold mt-1">{diferencial.title}</h3>
+                  <h3 className="text-xl font-semibold mt-1">
+                    {diferencial.title}
+                  </h3>
                 </div>
               </div>
             ))}
@@ -57,4 +83,4 @@ const Diferenciais = () => {
   );
 };
 
-export default Diferenciais; 
+export default Diferenciais;

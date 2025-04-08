@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import building from '../assets/building.jpg';
 
 // Componente FlipCard encapsula a lógica de flip mantendo o layout original na frente
 const FlipCard = ({

@@ -76,6 +76,16 @@ const Header = () => {
             </li>
             <li>
               <button
+                onClick={() => scrollToSection('simuladores')}
+                className={`hover:text-secondary ${
+                  scrolled ? 'text-primary' : 'text-white'
+                }`}
+              >
+                Simular
+              </button>
+            </li>
+            <li>
+              <button
                 onClick={() => scrollToSection('diferenciais')}
                 className={`hover:text-secondary ${
                   scrolled ? 'text-primary' : 'text-white'
@@ -139,6 +149,16 @@ const Header = () => {
                   }`}
                 >
                   Núcleos de Atuação
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection('simuladores')}
+                  className={`block px-4 py-2 text-right transition-colors duration-200 ${
+                    scrolled ? 'text-black hover:bg-gray-100' : 'text-white hover:bg-gray-700'
+                  }`}
+                >
+                  Simular
                 </button>
               </li>
               <li>

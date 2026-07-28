@@ -36,6 +36,22 @@ const Hero = () => {
           >
             Soluções estratégicas para maximizar seu capital
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              type="button"
+              onClick={() => scrollToSection('simuladores')}
+              className="px-8 py-3 rounded-md bg-secondary text-dark-bg font-bold hover:brightness-95 transition-all"
+            >
+              Simular carta de crédito
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollToSection('contato')}
+              className="px-8 py-3 rounded-md border-2 border-white text-white font-bold hover:bg-white/10 transition-all"
+            >
+              Fale conosco
+            </button>
+          </div>
         </div>
       </div>
     </section>

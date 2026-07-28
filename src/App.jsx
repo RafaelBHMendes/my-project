@@ -2,6 +2,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import QuemSomos from './components/QuemSomos';
 import NucleosAtuacao from './components/NucleosAtuacao';
+import Simuladores from './components/Simuladores';
 import Diferenciais from './components/Diferenciais';
 import FaleConosco from './components/FaleConosco';
 import Footer from './components/Footer';
@@ -17,6 +18,7 @@ function App() {
       <main className="max-w-screen-xl mx-auto px-4">
         <QuemSomos />
         <NucleosAtuacao />
+        <Simuladores />
         <Diferenciais />
         <FaleConosco />
       </main>

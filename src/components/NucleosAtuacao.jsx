@@ -183,6 +183,18 @@ const NucleosAtuacao = () => {
             />
           ))}
         </div>
+        <div className="text-center mt-12">
+          <button
+            type="button"
+            onClick={() => {
+              const el = document.getElementById('simuladores');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="px-8 py-3 rounded-md bg-primary text-white font-semibold hover:bg-dark-bg transition-colors"
+          >
+            Simular agora
+          </button>
+        </div>
       </div>
     </section>
   );
